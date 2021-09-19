@@ -10,7 +10,7 @@ cookiecutter <URL>
 
 ```shell
 cd <project_name>
-python -m venv venv # or python -m virtualenv venv
+python -m virtualenv venv
 source venv/bin/activate
 pip install -r requirements.txt
 pip install -r requirements-dev.txt

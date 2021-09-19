@@ -1,0 +1,35 @@
+[tool.black]
+line-length = 100
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[mypy]
+warn_return_any = true
+
+[tool.flakehell]
+max-line-length = 100
+show_source = true
+format = "grouped"
+exclude = [".git", "venv", "*_cache", "build", "dist"]
+
+[tool.flakehell.plugins]
+flake8-bugbear = ["+*"]
+flake8-builtins = ["+*"]
+pep8-naming = ["+*"]
+pyflakes = ["+*"]
